@@ -7,7 +7,9 @@ namespace Game
   {
     public static void Main()
     {
-     Console.WriteLine();
+     Scrabble newGame = new Scrabble();
+     char[] userLetters = newGame.RandomLetters();
+     Console.WriteLine(userLetters);
     }
   }
 
