@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
-
 namespace Game.Models
 {
   public class Scrabble
@@ -30,7 +28,6 @@ namespace Game.Models
         {
           if(letterDict[keys[x]].Contains(Char.ToUpper(word[i])))
           {
-            Console.WriteLine("adding to total");
             totalScore += keys[x];
           }
         }
