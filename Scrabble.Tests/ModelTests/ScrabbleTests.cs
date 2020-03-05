@@ -8,9 +8,11 @@ namespace Game.Tests
   public class MakeFilesTests
   {
     [TestMethod]
-    public void MethodName_WhatItDoes_ReturnObject()
+    public void CalculateWordScore_ReturnsScoreOfWord_7()
     {
-
+      Scrabble newGame = new Scrabble();
+      int wordScore = newGame.CalculateWordScore("cob");
+      Assert.AreEqual(7, wordScore);
     }
 
   }
