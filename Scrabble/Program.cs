@@ -10,6 +10,10 @@ namespace Game
      Scrabble newGame = new Scrabble();
      char[] userLetters = newGame.RandomLetters();
      Console.WriteLine(userLetters);
+
+     Console.WriteLine("Make as many words as you can with the 7 presented letters!");
+     string madeWords = Console.ReadLine();
+     Console.WriteLine(newGame.CalculateWordScore(madeWords));
     }
   }
 
