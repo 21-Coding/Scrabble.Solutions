@@ -11,8 +11,8 @@ namespace Game.Tests
     public void CalculateWordScore_ReturnsScoreOfWord_7()
     {
       Scrabble newGame = new Scrabble();
-      int wordScore = newGame.CalculateWordScore("cob");
-      Assert.AreEqual(7, wordScore);
+      int wordScore = newGame.CalculateWordScore("hello");
+      Assert.AreEqual(8, wordScore);
     }
 
   }
