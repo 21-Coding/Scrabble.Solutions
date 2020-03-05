@@ -50,5 +50,11 @@ namespace Game.Models
       char[] sevenLetterArr = charList.ToArray();
       return sevenLetterArr;
     }
+    public string[] CutAtComma(string words)
+    {
+      string[] outputtedWords = words.Split(", ");
+      return outputtedWords;
+
+    }
   }
 }
