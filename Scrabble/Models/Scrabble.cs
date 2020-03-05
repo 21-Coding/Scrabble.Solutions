@@ -18,8 +18,8 @@ namespace Game.Models
       {8, new char[] {'J', 'X'}},
       {10, new char[] {'Q', 'Z'}}
     };
+    char[] alphabetList = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 
-    
     public int CalculateWordScore(string word)
     {
       int[] keys = letterDict.Keys.ToArray();
@@ -38,19 +38,17 @@ namespace Game.Models
       return totalScore;
     }
 
+    public char[] RandomLetters()
+    {
+      Random randLetters = new Random();
+      List<char> charList = new List<char>();
+      while(charList.Count < 7)
+      {
+        int index = randLetters.Next(1, 25);
+        charList.Add(alphabetList[index]);
+      }
+      char[] sevenLetterArr = charList.ToArray();
+      return sevenLetterArr;
+    }
   }
-
 }
-
-
-
-
-
-// //      static void TypeLineFast(string line) 
-//         {
-//             for (int i = 0; i < line.Length; i++) 
-//             {
-//                 Console.Write(line[i]);
-//                 System.Threading.Thread.Sleep(10);
-//             }
-//         }
