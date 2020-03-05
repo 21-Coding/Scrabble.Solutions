@@ -13,7 +13,14 @@ namespace Game
 
      Console.WriteLine("Make as many words as you can with the 7 presented letters!");
      string madeWords = Console.ReadLine();
-     Console.WriteLine(newGame.CalculateWordScore(madeWords));
+     string[] wordsArray = newGame.CutAtComma(madeWords);
+     
+     for (int i = 0; i < wordsArray.Length; i++)
+     {
+     Console.WriteLine(newGame.CalculateWordScore(wordsArray[i]));
+
+
+     }
     }
   }
 
